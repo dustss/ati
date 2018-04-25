@@ -1,0 +1,11 @@
+<!--logs.wxml-->
+<view class='yourBack'>
+  <view class='everyDay'>
+    <view class="everyHalf" wx:for='{{half}}' bindtap='onPainting' id='{{index}}'
+    style='background-color:{{item.paintColor}}'>
+    </view>
+  </view>
+  <view class='paintTools'>
+    <view class='brush' wx:for='{{brushes}}' bindtap='onPenSelected' id='{{index}}' style='background-color:{{item.brushColor}}'> </view>
+  </view>
+</view>

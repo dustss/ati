@@ -1,0 +1,32 @@
+
+.yourBack
+{
+  display: flex;
+  flex-direction: row;
+}
+.everyDay {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color:whitesmoke;
+}
+.everyHalf {
+  height: 75rpx;
+  width: 500rpx;
+  background-color: gainsboro;
+  margin: 2rpx;
+}
+
+.paintTools
+{
+  display: flex;
+  flex-direction: column;
+}
+.brush{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 40rpx;
+  /* color:greenyellow;
+  color:lightseagreen; */
+color:tomato
+}
