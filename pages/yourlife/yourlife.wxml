@@ -1,11 +1,16 @@
 <!--logs.wxml-->
+
+
+<!-- 记录的主体部分，涂色记录区域  -->
 <view class='yourBack'>
   <view class='everyDay'>
-    <view class="everyHalf" wx:for='{{half}}' bindtap='onPainting' id='{{index}}'
-    style='background-color:{{item.paintColor}}'>
+    <view class="everyHalf" wx:for='{{half}}' bindtap='onPainting' bindtouchmove='onRealPainting' id='{{index}}' style='background-color:{{item.paintColor}}'>
     </view>
   </view>
+
+
+  <!--涂色工具区域  -->
   <view class='paintTools'>
-    <view class='brush' wx:for='{{brushes}}' bindtap='onPenSelected' id='{{index}}' style='background-color:{{item.brushColor}}'> </view>
+    <view class='brush {{pen==index?"selected":""}}' wx:for='{{brushes}}' bindtap='onPenSelected' id='{{index}}' style='background-color:{{item.brushColor}}'> </view>
   </view>
 </view>
