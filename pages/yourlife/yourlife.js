@@ -7,7 +7,7 @@ Page({
     brushColor: ['tomato', 'orange', 'greenyellow', 'skyblue','pink'],
     pen:-1
   },
-  onLoad: function (){
+  onLoad: function () {
     let brushes=[]
     for(let i=0;i<5;i++){
       brushes.push({
@@ -32,28 +32,15 @@ Page({
 
   onPainting(e){  
       var id = e.currentTarget.id;
-      if(this.data.pen==-1) {
-        this.data.half[id].paintColor = 'gainsboro'
-      }
+      if(this.data.pen==-1) return false
+
       this.data.half[id].paintColor = this.data.brushColor[this.data.pen]
       this.setData({
         half: this.data.half
       })
       
   },
-//   onRealPainting(e){
-// console.log(e)
-//   },
   onPenSelected(f){
-    var pen = f.currentTarget.id;
-    if(this.data.pen==pen)
-    this.setData({
-      pen: -1
-    })
-    else{
-      this.setData({
-        pen: pen
-      })
-    }
+    this.data.pen = f.currentTarget.id;
   }
 })

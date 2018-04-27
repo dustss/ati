@@ -21,20 +21,12 @@
 {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  left:75%
 }
-
 .brush{
-border-radius:50%;
   width: 60rpx;
   height: 60rpx;
-  margin: 30rpx;
+  margin: 40rpx;
   /* color:greenyellow;
   color:lightseagreen; */
-}
-
-.selected{
-  width: 40rpx;
-  height: 40rpx;
+color:tomato
 }
