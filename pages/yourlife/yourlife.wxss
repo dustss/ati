@@ -1,15 +1,15 @@
-
-.yourBack
-{
+.yourBack {
   display: flex;
   flex-direction: row;
 }
+
 .everyDay {
   width: 70%;
   display: flex;
   flex-direction: column;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
 }
+
 .everyHalf {
   height: 75rpx;
   width: 500rpx;
@@ -17,24 +17,21 @@
   margin: 2rpx;
 }
 
-.paintTools
-{
+.paintTools {
   display: flex;
   flex-direction: column;
   position: fixed;
-  left:75%
+  left: 75%;
 }
 
-.brush{
-border-radius:50%;
+.brush {
+  border-radius: 50%;
   width: 60rpx;
   height: 60rpx;
   margin: 30rpx;
-  /* color:greenyellow;
-  color:lightseagreen; */
 }
 
-.selected{
+.selected {
   width: 40rpx;
   height: 40rpx;
 }
