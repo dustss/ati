@@ -3,18 +3,21 @@
   flex-direction: row;
 }
 
-.canvasContainer{
+.canvasContainer {
   display: flex;
   width: 75%;
   flex-direction: row;
-  flex-wrap:wrap;
-    background-color: whitesmoke;
-    height:100%
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  height: 100%;
+  margin-left: 10rpx;
 }
-.gridRow{
-    margin-bottom: 10rpx;
+
+.gridRow {
+  margin-bottom: 10rpx;
 }
-.gridPixel{
+
+.gridPixel {
   width: 100rpx;
   height: 100rpx;
   margin-right: 10rpx;
@@ -27,7 +30,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 75%;
+  left: 80%;
 }
 
 .brush {

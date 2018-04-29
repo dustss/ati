@@ -1,15 +1,12 @@
-<!--logs.wxml-->
-<!-- bindtouchmove='onPenMoving' -->
+<!--yourlife.wxml-->
 
 <!-- 背景遮罩 -->
 <view class='playGround'>
   <!-- 记录的主体部分，涂色记录区域  -->
-  <view class='canvasContainer' >
+  <view class='canvasContainer'>
     <view wx:for='{{grid}}' wx:for-index='rowID' wx:for-item='row' class='gridRow'>
-      <view wx:for='{{row}}' wx:for-index='columnID' wx:for-item='pixel' class='gridPixel ' 
-      style='background-color:{{pixelColor}}'
-      id='{{rowID}},{{columnID}}' bindtap='onPainting'>
-        <text class='words'>{{rowID}},{{columnID}}</text>
+      <view wx:for='{{row}}' wx:for-index='columnID' wx:for-item='pixel' class='gridPixel ' style='background-color:{{pixel.paintColor}}' id='{{rowID}},{{columnID}}' bindtap='onPainting'>
+
       </view>
     </view>
 
