@@ -1,20 +1,26 @@
-.yourBack {
+.playGround {
   display: flex;
   flex-direction: row;
 }
 
-.everyDay {
-  width: 70%;
+.canvasContainer{
   display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
+  width: 75%;
+  flex-direction: row;
+  flex-wrap:wrap;
+    background-color: whitesmoke;
+    height:100%
 }
-
-.everyHalf {
-  height: 75rpx;
-  width: 500rpx;
+.gridRow{
+    margin-bottom: 10rpx;
+}
+.gridPixel{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+  float: left;
+  border-radius: 3px;
   background-color: gainsboro;
-  margin: 2rpx;
 }
 
 .paintTools {

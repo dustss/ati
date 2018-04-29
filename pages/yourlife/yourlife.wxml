@@ -1,21 +1,27 @@
 <!--logs.wxml-->
-    <!-- bindtouchmove='onPenMoving' -->
+<!-- bindtouchmove='onPenMoving' -->
 
-<!-- 记录的主体部分，涂色记录区域  -->
-<view class='yourBack'>
-  <view class='everyDay'   bindtouchmove='onTouchMoving'  >
-    <view class="everyHalf" wx:for='{{half}}' wx:key="body" bindtap='onPainting' 
+<!-- 背景遮罩 -->
+<view class='playGround'>
+  <!-- 记录的主体部分，涂色记录区域  -->
+  <view class='canvasContainer' >
+    <view wx:for='{{grid}}' wx:for-index='rowID' wx:for-item='row' class='gridRow'>
+      <view wx:for='{{row}}' wx:for-index='columnID' wx:for-item='pixel' class='gridPixel ' 
+      style='background-color:{{pixelColor}}'
+      id='{{rowID}},{{columnID}}' bindtap='onPainting'>
+        <text class='words'>{{rowID}},{{columnID}}</text>
+      </view>
+    </view>
 
-    id='{{index}}' style='background-color:{{item.paintColor}}'>
+  </view>
+
+  <!--工具面板区域  -->
+  <view class='toolContainer'>
+    <!--涂色工具区域  -->
+    <view class='paintTools'>
+      <view class='brush {{pen==index?"selected":""}}' wx:for='{{brushes}}' wx:key="tool" bindtap='onPenSelected' id='{{index}}' style='background-color:{{item.brushColor}}'> </view>
     </view>
   </view>
 
 
-  <!--涂色工具区域  -->
-  <view class='paintTools'>
-    <view class='brush {{pen==index?"selected":""}}' wx:for='{{brushes}}' wx:key="tool" 
-    bindtap='onPenSelected' 
-    id='{{index}}' style='background-color:{{item.brushColor}}'> </view>
-  </view>
 </view>
-

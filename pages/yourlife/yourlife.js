@@ -1,8 +1,10 @@
 //logs.js
+const COLUMN_NUMBER = 7
 
 Page({
   data: {
-    half: [],
+    grid: [],
+    row: Array.from(new Array(5),(val,index)=>index),
     brushes: [],
     brushColor: ['tomato', 'orange', 'greenyellow', 'skyblue','pink'],
     pen:-1
@@ -19,34 +21,29 @@ Page({
       brushes: brushes
     })
     // 初始化列表条目
-    let half=[]
-    for(let i=0;i<12;i++){
-      half.push({
-        paintColor: 'gainsboro'
-      })
+    let grid=[];
+    for (let i = 0; i < COLUMN_NUMBER;i++)
+    {
+      grid.push(this.data.row)
     }
     this.setData({
-      half: half
+      grid:grid,
     })
 
+
   },
+
 /**
  * 点击列表单个条目 变换条目颜色
  */
   onPainting(e){  
-      var id = e.currentTarget.id;
-      if(this.data.pen==-1) {
-        this.data.half[id].paintColor = 'gainsboro'
-      }
-      this.data.half[id].paintColor = this.data.brushColor[this.data.pen]
-      this.setData({
-        half: this.data.half
-      })
-      
+    console.log(e.currentTarget.id)
+    var x= e.currentTarget.id[0]
+    var y = e.currentTarget.id[2]
+    
+
   },
-//   onRealPainting(e){
-// console.log(e)
-//   },
+
 /**
  * 绘图颜色 绘图工具选择
  */
@@ -62,12 +59,12 @@ Page({
       })
     }
   },
+
 /**
  * 模拟涂抹绘图效果
  */
   onTouchMoving(e){
     console.log(e)
-
   }
 
 })
