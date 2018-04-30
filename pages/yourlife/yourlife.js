@@ -45,6 +45,14 @@ Page({
     })
   },
   /**
+   * 重置画笔状态
+   */
+  resetPen(){
+    this.setData({
+      pen: -1
+    })
+  },
+  /**
    * 点击单个pixel 变换颜色
    */
   onPainting(e) {
@@ -78,6 +86,8 @@ Page({
    */
   onPullDownRefresh() {
     this.initCanvas()
+    this.initPaintTools()
+    this.resetPen()
     wx.stopPullDownRefresh()
   }
 
