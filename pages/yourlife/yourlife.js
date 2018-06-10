@@ -6,7 +6,7 @@ Page({
   data: {
     pixels: [],
     brushes: [],
-    brushColor: ['tomato', 'orange', 'greenyellow', 'skyblue', 'pink'],
+    brushColor: ['tomato', 'orange', 'lightgreen', 'skyblue', 'pink'],
     pen: -1
   },
   onLoad: function () {
